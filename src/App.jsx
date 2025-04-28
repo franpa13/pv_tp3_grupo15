@@ -1,18 +1,32 @@
 import { useState } from 'react'
 
 import './App.css'
-import { TaskInput } from './componentes/TaskInput'
-import { TaskList } from './componentes/TaskList'
+import { TaskInput } from './components/TaskInput'
+import { TaskList } from './components/TaskList'
+import { ToDoList } from './components/todoList'
+import { ExtraExercices } from './components/extraExercices'
 
 function App() {
-
+  const [valueSelect, setValueSelect] = useState('todolist')
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
-      <h1>Lista de Tareas </h1>
-      <TaskInput></TaskInput>
-      <TaskList></TaskList>
-    </div>
+    <>
+      <div style={{ display: 'flex', justifyContent: "center", alignItems: 'center', gap: '10px' }}>
+        <span onClick={() => setValueSelect('todolist')} style={{ cursor: 'pointer', color: valueSelect === 'todolist' ? 'blue' : 'black', fontSize: '20px' }} >
+          Lista de tareas
+        </span>
+        /
+        <span onClick={() => setValueSelect('extra')} style={{ cursor: 'pointer', color: valueSelect === 'extra' ? 'blue' : 'black', fontSize: '20px' }} >
+          Ejercicios extras
+        </span>
+      </div>
+      {valueSelect === "todolist" ? (
+        <ToDoList></ToDoList>
+      ) : (
+        <ExtraExercices></ExtraExercices>
+      )}
+    </>
+
   )
 }
 
