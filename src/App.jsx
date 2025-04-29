@@ -1,8 +1,6 @@
 import { useState } from 'react'
 
 import './App.css'
-import { TaskInput } from './components/TaskInput'
-import { TaskList } from './components/TaskList'
 import { ToDoList } from './components/todoList'
 import { ExtraExercices } from './components/extraExercices'
 
