@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './App.css'
 import { ToDoList } from './components/todoList'
 import { ExtraExercices } from './components/extraExercices'
-
 function App() {
   const [valueSelect, setValueSelect] = useState('todolist')
 

@@ -6,7 +6,6 @@ export const ToDoList = () => {
     const [valueInput, setValueInput] = useState('')
     const [error, setError] = useState(false)
     const [taskList, setTaskList] = useState([
-
     ])
     // mandar estas funciones a la carpeta utils (export const...)
     // add Task
