@@ -8,6 +8,7 @@ export const ToDoList = () => {
     const [taskList, setTaskList] = useState([
 
     ])
+    // mandar estas funciones a la carpeta utils (export const...)
     // add Task
     const addTask = (value) => {
         if (value) {
